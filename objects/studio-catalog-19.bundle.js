@@ -7046,19 +7046,19 @@ var Matrix4 = class _Matrix4 {
     return this;
   }
   /**
-  	 * Creates a perspective projection matrix. This is used internally by
-  	 * {@link PerspectiveCamera#updateProjectionMatrix}.
+     * Creates a perspective projection matrix. This is used internally by
+     * {@link PerspectiveCamera#updateProjectionMatrix}.
 
-  	 * @param {number} left - Left boundary of the viewing frustum at the near plane.
-  	 * @param {number} right - Right boundary of the viewing frustum at the near plane.
-  	 * @param {number} top - Top boundary of the viewing frustum at the near plane.
-  	 * @param {number} bottom - Bottom boundary of the viewing frustum at the near plane.
-  	 * @param {number} near - The distance from the camera to the near plane.
-  	 * @param {number} far - The distance from the camera to the far plane.
-  	 * @param {(WebGLCoordinateSystem|WebGPUCoordinateSystem)} [coordinateSystem=WebGLCoordinateSystem] - The coordinate system.
-  	 * @param {boolean} [reversedDepth=false] - Whether to use a reversed depth.
-  	 * @return {Matrix4} A reference to this matrix.
-  	 */
+     * @param {number} left - Left boundary of the viewing frustum at the near plane.
+     * @param {number} right - Right boundary of the viewing frustum at the near plane.
+     * @param {number} top - Top boundary of the viewing frustum at the near plane.
+     * @param {number} bottom - Bottom boundary of the viewing frustum at the near plane.
+     * @param {number} near - The distance from the camera to the near plane.
+     * @param {number} far - The distance from the camera to the far plane.
+     * @param {(WebGLCoordinateSystem|WebGPUCoordinateSystem)} [coordinateSystem=WebGLCoordinateSystem] - The coordinate system.
+     * @param {boolean} [reversedDepth=false] - Whether to use a reversed depth.
+     * @return {Matrix4} A reference to this matrix.
+     */
   makePerspective(left, right, top, bottom, near, far, coordinateSystem = WebGLCoordinateSystem, reversedDepth = false) {
     const te = this.elements;
     const x = 2 * near / (right - left);
@@ -7099,19 +7099,19 @@ var Matrix4 = class _Matrix4 {
     return this;
   }
   /**
-  	 * Creates a orthographic projection matrix. This is used internally by
-  	 * {@link OrthographicCamera#updateProjectionMatrix}.
+     * Creates a orthographic projection matrix. This is used internally by
+     * {@link OrthographicCamera#updateProjectionMatrix}.
 
-  	 * @param {number} left - Left boundary of the viewing frustum at the near plane.
-  	 * @param {number} right - Right boundary of the viewing frustum at the near plane.
-  	 * @param {number} top - Top boundary of the viewing frustum at the near plane.
-  	 * @param {number} bottom - Bottom boundary of the viewing frustum at the near plane.
-  	 * @param {number} near - The distance from the camera to the near plane.
-  	 * @param {number} far - The distance from the camera to the far plane.
-  	 * @param {(WebGLCoordinateSystem|WebGPUCoordinateSystem)} [coordinateSystem=WebGLCoordinateSystem] - The coordinate system.
-  	 * @param {boolean} [reversedDepth=false] - Whether to use a reversed depth.
-  	 * @return {Matrix4} A reference to this matrix.
-  	 */
+     * @param {number} left - Left boundary of the viewing frustum at the near plane.
+     * @param {number} right - Right boundary of the viewing frustum at the near plane.
+     * @param {number} top - Top boundary of the viewing frustum at the near plane.
+     * @param {number} bottom - Bottom boundary of the viewing frustum at the near plane.
+     * @param {number} near - The distance from the camera to the near plane.
+     * @param {number} far - The distance from the camera to the far plane.
+     * @param {(WebGLCoordinateSystem|WebGPUCoordinateSystem)} [coordinateSystem=WebGLCoordinateSystem] - The coordinate system.
+     * @param {boolean} [reversedDepth=false] - Whether to use a reversed depth.
+     * @return {Matrix4} A reference to this matrix.
+     */
   makeOrthographic(left, right, top, bottom, near, far, coordinateSystem = WebGLCoordinateSystem, reversedDepth = false) {
     const te = this.elements;
     const x = 2 / (right - left);
@@ -12298,44 +12298,44 @@ var WebGLCubeRenderTarget = class extends WebGLRenderTarget {
         /* glsl */
         `
 
-				varying vec3 vWorldDirection;
+        varying vec3 vWorldDirection;
 
-				vec3 transformDirection( in vec3 dir, in mat4 matrix ) {
+        vec3 transformDirection( in vec3 dir, in mat4 matrix ) {
 
-					return normalize( ( matrix * vec4( dir, 0.0 ) ).xyz );
+          return normalize( ( matrix * vec4( dir, 0.0 ) ).xyz );
 
-				}
+        }
 
-				void main() {
+        void main() {
 
-					vWorldDirection = transformDirection( position, modelMatrix );
+          vWorldDirection = transformDirection( position, modelMatrix );
 
-					#include <begin_vertex>
-					#include <project_vertex>
+          #include <begin_vertex>
+          #include <project_vertex>
 
-				}
-			`
+        }
+      `
       ),
       fragmentShader: (
         /* glsl */
         `
 
-				uniform sampler2D tEquirect;
+        uniform sampler2D tEquirect;
 
-				varying vec3 vWorldDirection;
+        varying vec3 vWorldDirection;
 
-				#include <common>
+        #include <common>
 
-				void main() {
+        void main() {
 
-					vec3 direction = normalize( vWorldDirection );
+          vec3 direction = normalize( vWorldDirection );
 
-					vec2 sampleUV = equirectUv( direction );
+          vec2 sampleUV = equirectUv( direction );
 
-					gl_FragColor = texture2D( tEquirect, sampleUV );
+          gl_FragColor = texture2D( tEquirect, sampleUV );
 
-				}
-			`
+        }
+      `
       )
     };
     const geometry = new BoxGeometry(5, 5, 5);
@@ -20268,65 +20268,65 @@ function _getBlurShader(lodMax, width, height) {
       /* glsl */
       `
 
-			precision mediump float;
-			precision mediump int;
+      precision mediump float;
+      precision mediump int;
 
-			varying vec3 vOutputDirection;
+      varying vec3 vOutputDirection;
 
-			uniform sampler2D envMap;
-			uniform int samples;
-			uniform float weights[ n ];
-			uniform bool latitudinal;
-			uniform float dTheta;
-			uniform float mipInt;
-			uniform vec3 poleAxis;
+      uniform sampler2D envMap;
+      uniform int samples;
+      uniform float weights[ n ];
+      uniform bool latitudinal;
+      uniform float dTheta;
+      uniform float mipInt;
+      uniform vec3 poleAxis;
 
-			#define ENVMAP_TYPE_CUBE_UV
-			#include <cube_uv_reflection_fragment>
+      #define ENVMAP_TYPE_CUBE_UV
+      #include <cube_uv_reflection_fragment>
 
-			vec3 getSample( float theta, vec3 axis ) {
+      vec3 getSample( float theta, vec3 axis ) {
 
-				float cosTheta = cos( theta );
-				// Rodrigues' axis-angle rotation
-				vec3 sampleDirection = vOutputDirection * cosTheta
-					+ cross( axis, vOutputDirection ) * sin( theta )
-					+ axis * dot( axis, vOutputDirection ) * ( 1.0 - cosTheta );
+        float cosTheta = cos( theta );
+        // Rodrigues' axis-angle rotation
+        vec3 sampleDirection = vOutputDirection * cosTheta
+          + cross( axis, vOutputDirection ) * sin( theta )
+          + axis * dot( axis, vOutputDirection ) * ( 1.0 - cosTheta );
 
-				return bilinearCubeUV( envMap, sampleDirection, mipInt );
+        return bilinearCubeUV( envMap, sampleDirection, mipInt );
 
-			}
+      }
 
-			void main() {
+      void main() {
 
-				vec3 axis = latitudinal ? poleAxis : cross( poleAxis, vOutputDirection );
+        vec3 axis = latitudinal ? poleAxis : cross( poleAxis, vOutputDirection );
 
-				if ( all( equal( axis, vec3( 0.0 ) ) ) ) {
+        if ( all( equal( axis, vec3( 0.0 ) ) ) ) {
 
-					axis = vec3( vOutputDirection.z, 0.0, - vOutputDirection.x );
+          axis = vec3( vOutputDirection.z, 0.0, - vOutputDirection.x );
 
-				}
+        }
 
-				axis = normalize( axis );
+        axis = normalize( axis );
 
-				gl_FragColor = vec4( 0.0, 0.0, 0.0, 1.0 );
-				gl_FragColor.rgb += weights[ 0 ] * getSample( 0.0, axis );
+        gl_FragColor = vec4( 0.0, 0.0, 0.0, 1.0 );
+        gl_FragColor.rgb += weights[ 0 ] * getSample( 0.0, axis );
 
-				for ( int i = 1; i < n; i++ ) {
+        for ( int i = 1; i < n; i++ ) {
 
-					if ( i >= samples ) {
+          if ( i >= samples ) {
 
-						break;
+            break;
 
-					}
+          }
 
-					float theta = dTheta * float( i );
-					gl_FragColor.rgb += weights[ i ] * getSample( -1.0 * theta, axis );
-					gl_FragColor.rgb += weights[ i ] * getSample( theta, axis );
+          float theta = dTheta * float( i );
+          gl_FragColor.rgb += weights[ i ] * getSample( -1.0 * theta, axis );
+          gl_FragColor.rgb += weights[ i ] * getSample( theta, axis );
 
-				}
+        }
 
-			}
-		`
+      }
+    `
     ),
     blending: NoBlending,
     depthTest: false,
@@ -20345,24 +20345,24 @@ function _getEquirectMaterial() {
       /* glsl */
       `
 
-			precision mediump float;
-			precision mediump int;
+      precision mediump float;
+      precision mediump int;
 
-			varying vec3 vOutputDirection;
+      varying vec3 vOutputDirection;
 
-			uniform sampler2D envMap;
+      uniform sampler2D envMap;
 
-			#include <common>
+      #include <common>
 
-			void main() {
+      void main() {
 
-				vec3 outputDirection = normalize( vOutputDirection );
-				vec2 uv = equirectUv( outputDirection );
+        vec3 outputDirection = normalize( vOutputDirection );
+        vec2 uv = equirectUv( outputDirection );
 
-				gl_FragColor = vec4( texture2D ( envMap, uv ).rgb, 1.0 );
+        gl_FragColor = vec4( texture2D ( envMap, uv ).rgb, 1.0 );
 
-			}
-		`
+      }
+    `
     ),
     blending: NoBlending,
     depthTest: false,
@@ -20381,21 +20381,21 @@ function _getCubemapMaterial() {
       /* glsl */
       `
 
-			precision mediump float;
-			precision mediump int;
+      precision mediump float;
+      precision mediump int;
 
-			uniform float flipEnvMap;
+      uniform float flipEnvMap;
 
-			varying vec3 vOutputDirection;
+      varying vec3 vOutputDirection;
 
-			uniform samplerCube envMap;
+      uniform samplerCube envMap;
 
-			void main() {
+      void main() {
 
-				gl_FragColor = textureCube( envMap, vec3( flipEnvMap * vOutputDirection.x, vOutputDirection.yz ) );
+        gl_FragColor = textureCube( envMap, vec3( flipEnvMap * vOutputDirection.x, vOutputDirection.yz ) );
 
-			}
-		`
+      }
+    `
     ),
     blending: NoBlending,
     depthTest: false,
@@ -20407,60 +20407,60 @@ function _getCommonVertexShader() {
     /* glsl */
     `
 
-		precision mediump float;
-		precision mediump int;
+    precision mediump float;
+    precision mediump int;
 
-		attribute float faceIndex;
+    attribute float faceIndex;
 
-		varying vec3 vOutputDirection;
+    varying vec3 vOutputDirection;
 
-		// RH coordinate system; PMREM face-indexing convention
-		vec3 getDirection( vec2 uv, float face ) {
+    // RH coordinate system; PMREM face-indexing convention
+    vec3 getDirection( vec2 uv, float face ) {
 
-			uv = 2.0 * uv - 1.0;
+      uv = 2.0 * uv - 1.0;
 
-			vec3 direction = vec3( uv, 1.0 );
+      vec3 direction = vec3( uv, 1.0 );
 
-			if ( face == 0.0 ) {
+      if ( face == 0.0 ) {
 
-				direction = direction.zyx; // ( 1, v, u ) pos x
+        direction = direction.zyx; // ( 1, v, u ) pos x
 
-			} else if ( face == 1.0 ) {
+      } else if ( face == 1.0 ) {
 
-				direction = direction.xzy;
-				direction.xz *= -1.0; // ( -u, 1, -v ) pos y
+        direction = direction.xzy;
+        direction.xz *= -1.0; // ( -u, 1, -v ) pos y
 
-			} else if ( face == 2.0 ) {
+      } else if ( face == 2.0 ) {
 
-				direction.x *= -1.0; // ( -u, v, 1 ) pos z
+        direction.x *= -1.0; // ( -u, v, 1 ) pos z
 
-			} else if ( face == 3.0 ) {
+      } else if ( face == 3.0 ) {
 
-				direction = direction.zyx;
-				direction.xz *= -1.0; // ( -1, v, -u ) neg x
+        direction = direction.zyx;
+        direction.xz *= -1.0; // ( -1, v, -u ) neg x
 
-			} else if ( face == 4.0 ) {
+      } else if ( face == 4.0 ) {
 
-				direction = direction.xzy;
-				direction.xy *= -1.0; // ( -u, -1, v ) neg y
+        direction = direction.xzy;
+        direction.xy *= -1.0; // ( -u, -1, v ) neg y
 
-			} else if ( face == 5.0 ) {
+      } else if ( face == 5.0 ) {
 
-				direction.z *= -1.0; // ( u, v, -1 ) neg z
+        direction.z *= -1.0; // ( u, v, -1 ) neg z
 
-			}
+      }
 
-			return direction;
+      return direction;
 
-		}
+    }
 
-		void main() {
+    void main() {
 
-			vOutputDirection = getDirection( uv, faceIndex );
-			gl_Position = vec4( position, 1.0 );
+      vOutputDirection = getDirection( uv, faceIndex );
+      gl_Position = vec4( position, 1.0 );
 
-		}
-	`
+    }
+  `
   );
 }
 function WebGLCubeUVMaps(renderer2) {
@@ -21737,23 +21737,23 @@ function loopReplacer(match, start, end, snippet) {
 }
 function generatePrecision(parameters) {
   let precisionstring = `precision ${parameters.precision} float;
-	precision ${parameters.precision} int;
-	precision ${parameters.precision} sampler2D;
-	precision ${parameters.precision} samplerCube;
-	precision ${parameters.precision} sampler3D;
-	precision ${parameters.precision} sampler2DArray;
-	precision ${parameters.precision} sampler2DShadow;
-	precision ${parameters.precision} samplerCubeShadow;
-	precision ${parameters.precision} sampler2DArrayShadow;
-	precision ${parameters.precision} isampler2D;
-	precision ${parameters.precision} isampler3D;
-	precision ${parameters.precision} isamplerCube;
-	precision ${parameters.precision} isampler2DArray;
-	precision ${parameters.precision} usampler2D;
-	precision ${parameters.precision} usampler3D;
-	precision ${parameters.precision} usamplerCube;
-	precision ${parameters.precision} usampler2DArray;
-	`;
+  precision ${parameters.precision} int;
+  precision ${parameters.precision} sampler2D;
+  precision ${parameters.precision} samplerCube;
+  precision ${parameters.precision} sampler3D;
+  precision ${parameters.precision} sampler2DArray;
+  precision ${parameters.precision} sampler2DShadow;
+  precision ${parameters.precision} samplerCubeShadow;
+  precision ${parameters.precision} sampler2DArrayShadow;
+  precision ${parameters.precision} isampler2D;
+  precision ${parameters.precision} isampler3D;
+  precision ${parameters.precision} isamplerCube;
+  precision ${parameters.precision} isampler2DArray;
+  precision ${parameters.precision} usampler2D;
+  precision ${parameters.precision} usampler3D;
+  precision ${parameters.precision} usamplerCube;
+  precision ${parameters.precision} usampler2DArray;
+  `;
   if (parameters.precision === "highp") {
     precisionstring += "\n#define HIGH_PRECISION";
   } else if (parameters.precision === "mediump") {
@@ -25640,7 +25640,7 @@ function WebGLUtils(gl, extensions) {
 var _occlusion_vertex = `
 void main() {
 
-	gl_Position = vec4( position, 1.0 );
+  gl_Position = vec4( position, 1.0 );
 
 }`;
 var _occlusion_fragment = `
@@ -25650,17 +25650,17 @@ uniform float depthHeight;
 
 void main() {
 
-	vec2 coord = vec2( gl_FragCoord.x / depthWidth, gl_FragCoord.y / depthHeight );
+  vec2 coord = vec2( gl_FragCoord.x / depthWidth, gl_FragCoord.y / depthHeight );
 
-	if ( coord.x >= 1.0 ) {
+  if ( coord.x >= 1.0 ) {
 
-		gl_FragDepth = texture( depthColor, vec3( coord.x - 1.0, coord.y, 1 ) ).r;
+    gl_FragDepth = texture( depthColor, vec3( coord.x - 1.0, coord.y, 1 ) ).r;
 
-	} else {
+  } else {
 
-		gl_FragDepth = texture( depthColor, vec3( coord.x, coord.y, 0 ) ).r;
+    gl_FragDepth = texture( depthColor, vec3( coord.x, coord.y, 0 ) ).r;
 
-	}
+  }
 
 }`;
 var WebXRDepthSensing = class {
