@@ -1,0 +1,19 @@
+{
+  "id": "011",
+  "name": "SOFT GRID CARDIGAN",
+  "bytes": 4202592,
+  "triangles": 74952,
+  "material_groups": 3,
+  "bounds": {
+    "width_m": 0.7924,
+    "height_m": 0.7957,
+    "depth_m": 0.312
+  },
+  "reference_views": 3,
+  "physical_measurements": false,
+  "cloth_simulation": false,
+  "verified_person_avatar": false,
+  "fit_revision": "authored standing silhouette with asymmetrical arm pose",
+  "original_vertices": 37798,
+  "accepted_materials_unchanged": true
+}
