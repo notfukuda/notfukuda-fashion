@@ -1,0 +1,22 @@
+{
+  "id": "001",
+  "bytes": 1790224,
+  "triangles": 31379,
+  "material_groups": 1,
+  "reference_views": 3,
+  "scale_is_illustrative": true,
+  "bounds": {
+    "width_m": 0.6247,
+    "height_m": 0.6077,
+    "depth_m": 0.3157
+  },
+  "generated_design": true,
+  "human_reference_acceptance": "accepted",
+  "reference_source_sha256": "69e3d95e71efa9d9626ef373428aca22eacf6cd95964e70ab11d8eb465c9cda8",
+  "physical_measurements": false,
+  "cloth_simulation": false,
+  "verified_person_avatar": false,
+  "fit_revision": "image silhouette loft, manually registered regions, rounded inferred cross section, photo projection colour",
+  "accepted_knit_relief_retained": false,
+  "normal_basis": "UV1 derived in browser; UV0 atlas tangent deliberately omitted"
+}
