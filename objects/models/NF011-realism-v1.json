@@ -1,0 +1,18 @@
+{
+  "id": "011",
+  "name": "SOFT GRID CARDIGAN",
+  "bytes": 4199040,
+  "triangles": 74952,
+  "material_groups": 3,
+  "bounds": {
+    "width_m": 1.0083,
+    "height_m": 0.7869,
+    "depth_m": 0.2593
+  },
+  "generated_design": true,
+  "physical_measurements": false,
+  "cloth_simulation": false,
+  "reference_views": 1,
+  "material_revision": "photo-reference grid knit, normal, ORM, sheen, rib trim",
+  "web_textures": "1024px albedo / 512px normal and roughness JPEG shader maps, geometry unchanged"
+}
