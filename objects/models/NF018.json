@@ -1,0 +1,16 @@
+{
+  "id": "018",
+  "name": "FORM / 02",
+  "bytes": 334388,
+  "triangles": 3428,
+  "material_groups": 3,
+  "bounds": {
+    "width_m": 0.2506,
+    "height_m": 0.5629,
+    "depth_m": 0.0983
+  },
+  "generated_design": true,
+  "physical_measurements": false,
+  "cloth_simulation": false,
+  "reference_views": 1
+}

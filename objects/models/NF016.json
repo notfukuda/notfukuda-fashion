@@ -1,0 +1,16 @@
+{
+  "id": "016",
+  "name": "STRAIGHT WIDE TROUSERS",
+  "bytes": 574976,
+  "triangles": 16152,
+  "material_groups": 3,
+  "bounds": {
+    "width_m": 0.4599,
+    "height_m": 1.001,
+    "depth_m": 0.2475
+  },
+  "generated_design": true,
+  "physical_measurements": false,
+  "cloth_simulation": false,
+  "reference_views": 1
+}

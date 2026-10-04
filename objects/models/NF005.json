@@ -1,0 +1,16 @@
+{
+  "id": "005",
+  "name": "BLANK STATEMENT",
+  "bytes": 945536,
+  "triangles": 28528,
+  "material_groups": 2,
+  "bounds": {
+    "width_m": 0.7985,
+    "height_m": 0.6517,
+    "depth_m": 0.2531
+  },
+  "generated_design": true,
+  "physical_measurements": false,
+  "cloth_simulation": false,
+  "reference_views": 1
+}

@@ -1,0 +1,16 @@
+{
+  "id": "002",
+  "name": "LIQUID SILVER",
+  "bytes": 1427144,
+  "triangles": 38712,
+  "material_groups": 4,
+  "bounds": {
+    "width_m": 0.9219,
+    "height_m": 0.839,
+    "depth_m": 0.2675
+  },
+  "generated_design": true,
+  "physical_measurements": false,
+  "cloth_simulation": false,
+  "reference_views": 1
+}

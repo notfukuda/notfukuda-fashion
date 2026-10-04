@@ -1,0 +1,16 @@
+{
+  "id": "009",
+  "name": "COLUMN OVERCOAT",
+  "bytes": 982132,
+  "triangles": 32504,
+  "material_groups": 3,
+  "bounds": {
+    "width_m": 0.7541,
+    "height_m": 1.2719,
+    "depth_m": 0.2563
+  },
+  "generated_design": true,
+  "physical_measurements": false,
+  "cloth_simulation": false,
+  "reference_views": 1
+}

@@ -1,0 +1,16 @@
+{
+  "id": "011",
+  "name": "SOFT GRID CARDIGAN",
+  "bytes": 1392756,
+  "triangles": 37864,
+  "material_groups": 2,
+  "bounds": {
+    "width_m": 0.7566,
+    "height_m": 0.7409,
+    "depth_m": 0.2505
+  },
+  "generated_design": true,
+  "physical_measurements": false,
+  "cloth_simulation": false,
+  "reference_views": 1
+}

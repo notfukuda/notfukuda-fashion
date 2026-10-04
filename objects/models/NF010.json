@@ -1,0 +1,16 @@
+{
+  "id": "010",
+  "name": "COLUMN KNIT",
+  "bytes": 1156720,
+  "triangles": 35168,
+  "material_groups": 2,
+  "bounds": {
+    "width_m": 0.7602,
+    "height_m": 0.7653,
+    "depth_m": 0.2389
+  },
+  "generated_design": true,
+  "physical_measurements": false,
+  "cloth_simulation": false,
+  "reference_views": 1
+}

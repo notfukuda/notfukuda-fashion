@@ -1,0 +1,16 @@
+{
+  "id": "003",
+  "name": "AFTER HOURS COAT",
+  "bytes": 880164,
+  "triangles": 27204,
+  "material_groups": 3,
+  "bounds": {
+    "width_m": 0.5828,
+    "height_m": 1.2904,
+    "depth_m": 0.2587
+  },
+  "generated_design": true,
+  "physical_measurements": false,
+  "cloth_simulation": false,
+  "reference_views": 1
+}

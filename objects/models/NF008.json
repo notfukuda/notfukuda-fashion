@@ -1,0 +1,16 @@
+{
+  "id": "008",
+  "name": "SOFT FRAME PARKA",
+  "bytes": 1429852,
+  "triangles": 47176,
+  "material_groups": 3,
+  "bounds": {
+    "width_m": 0.7519,
+    "height_m": 1.085,
+    "depth_m": 0.272
+  },
+  "generated_design": true,
+  "physical_measurements": false,
+  "cloth_simulation": false,
+  "reference_views": 1
+}

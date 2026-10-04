@@ -1,0 +1,16 @@
+{
+  "id": "014",
+  "name": "SIDE LINE SHIRT",
+  "bytes": 1040472,
+  "triangles": 33600,
+  "material_groups": 2,
+  "bounds": {
+    "width_m": 0.7533,
+    "height_m": 0.88,
+    "depth_m": 0.2507
+  },
+  "generated_design": true,
+  "physical_measurements": false,
+  "cloth_simulation": false,
+  "reference_views": 1
+}

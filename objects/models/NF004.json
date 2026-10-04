@@ -1,0 +1,16 @@
+{
+  "id": "004",
+  "name": "NEGATIVE SPACE",
+  "bytes": 574196,
+  "triangles": 16152,
+  "material_groups": 3,
+  "bounds": {
+    "width_m": 0.4893,
+    "height_m": 1.001,
+    "depth_m": 0.2475
+  },
+  "generated_design": true,
+  "physical_measurements": false,
+  "cloth_simulation": false,
+  "reference_views": 1
+}
