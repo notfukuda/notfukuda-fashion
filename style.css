@@ -58,3 +58,13 @@
 @media(prefers-reduced-motion:reduce){.rich-tile img{transition:none}.rich-tile:hover img{transform:none}}
 .still .rich-tile img{transition:none}.still .rich-tile:hover img{transform:none}
 .home #header{background:rgba(16,16,16,.9);backdrop-filter:blur(12px)}
+
+/* Photo expansion: each editorial route has its own shoot. */
+.rich-edit-extra{margin:8vw auto;width:calc(100% - 12vw)}
+.rich-edit-extra .rich-page-image{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+.rich-edit-extra>span{display:block;margin-top:18px}
+.rich-crosslinks{border-top:1px solid #333}
+.rich-crosslinks .rich-more-links a{align-items:center;font-size:clamp(20px,3vw,42px)}
+.rich-crosslinks .rich-more-links a>span{font-size:10px;max-width:135px;letter-spacing:.12em;line-height:1.6}
+.rich-crosslinks .rich-more-links a>b{font-weight:400}
+@media(max-width:600px){.rich-edit-extra{width:calc(100% - 36px);margin:64px auto}.rich-crosslinks .rich-more-links a{gap:12px}.rich-crosslinks .rich-more-links a>span{width:82px;flex-shrink:0;font-size:8px}}
