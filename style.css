@@ -71,3 +71,16 @@
 
 /* Clothes shown in the room editorial link directly to their products. */
 .rich-frame{margin:0;max-width:100%;min-width:0}.rich-frame figcaption{display:flex;flex-wrap:wrap;gap:12px 24px;padding:16px 20px;background:#151515;color:#fff}.rich-frame figcaption>span{width:100%;font-size:9px;letter-spacing:.13em;color:#aaa}.rich-frame figcaption a{font-size:10px;line-height:1.7;overflow-wrap:anywhere}.rich-frame figcaption a:hover{color:#f14a43}.rich-edit-lead .rich-frame .rich-page-image{margin:auto}@media(max-width:700px){.rich-frame figcaption{padding:15px 22px;gap:9px}.rich-frame figcaption a{font-size:9px}}
+
+/* Brand: OFF STANDARD. Season: PRIVATE HOURS, autumn/winter 2026. */
+.home #main{padding-top:88px}
+@media(max-width:700px){.home #main{padding-top:73px}}
+.private-hero h1{font-family:'Barlow Condensed',Impact,sans-serif;font-size:clamp(76px,9vw,148px);letter-spacing:-.025em;line-height:.9}.private-hero .rich-hero-photo img{object-position:50% 0%}
+.private-hero h1 span{font-family:var(--font);font-size:14px;line-height:1.8;letter-spacing:0;max-width:28em}
+.private-season-line{display:flex;justify-content:space-between;gap:18px;border-top:1px solid #ffffff30;border-bottom:1px solid #ffffff30;padding:22px 3.5vw;font-size:11px;letter-spacing:.12em}
+.private-links{display:flex;gap:28px;flex-wrap:wrap}.private-campaign .chapter-link{margin:8px 0 20px}.private-campaign .campaign-caption>div a{display:block;line-height:1.8;margin:8px 0;font-size:11px}
+.private-brand-note{text-align:center;border-top:1px solid #ffffff30}.private-brand-note h2{font-size:clamp(28px,4vw,60px);font-weight:500;letter-spacing:-.035em;line-height:1.4}.private-brand-note p{line-height:2}.private-brand-note .form-note{margin-top:50px}
+.private-about-hero h1{font-family:'Barlow Condensed',Impact,sans-serif;font-size:clamp(110px,15vw,220px);letter-spacing:-.025em;line-height:.88}.private-about-hero p{font-size:clamp(24px,3vw,42px);line-height:1.6}
+.private-principles>div{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:50px;margin-top:55px}.private-principles article{border-top:1px solid #ffffff50;padding-top:25px;min-width:0}.private-principles article>span{font-size:10px;letter-spacing:.1em}.private-principles h2{font-size:clamp(26px,3vw,45px);font-weight:500}.private-principles p{font-size:14px;line-height:2;color:#bbb}.private-principles a{font-size:11px;overflow-wrap:anywhere}
+.private-season-hero h1{font-family:'Barlow Condensed',Impact,sans-serif;letter-spacing:-.025em;line-height:.9;font-size:clamp(75px,10vw,160px)}
+@media(max-width:700px){.private-hero h1{font-size:clamp(82px,26vw,148px)}.private-hero h1 span{font-size:12px}.private-hero .rich-hero-photo{min-height:380px;height:65svh}.private-season-line{font-size:8px;padding:18px}.private-links{gap:18px}.private-links .text-link{font-size:11px}.private-season-hero h1{font-size:26vw}.private-principles>div{grid-template-columns:1fr;gap:40px}.private-brand-note h2{font-size:26px}.private-about-hero h1{font-size:22vw}.private-about-hero+.about-story h2{font-size:clamp(21px,6.4vw,30px)}.brand-portrait-entry .season-entry-copy h2{font-size:21vw}.private-campaign .campaign-caption>div a{font-size:10px}}
