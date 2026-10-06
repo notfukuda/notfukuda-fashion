@@ -128,3 +128,34 @@ form[data-form="newsletter"] button:disabled,form[data-form="contact"] button:di
 @media(max-width:700px){.home-brand-main{grid-template-columns:1fr}.home-brand-photo{aspect-ratio:4/5}.home-brand-photo>span{left:20px;bottom:20px}.home-brand-copy{padding:35px 22px 42px}.home-brand-copy h2{font-size:clamp(72px,20vw,112px);margin:28px 0}.home-brand-statement{font-size:28px;margin-bottom:22px}.home-brand-detail{font-size:13px;margin-bottom:20px}.home-brand-foot{padding:22px;align-items:start;flex-direction:column;gap:14px}.home-brand-foot .text-link{font-size:10px;letter-spacing:0}.journal-pieces nav{gap:2px 18px}.journal-pieces .text-link{font-size:10px}}
 @media(prefers-reduced-motion:reduce){.home-brand-photo img,.home-brand-cta b{transition:none}.home-brand-main:hover .home-brand-photo img,.home-brand-main:hover .home-brand-cta b{transform:none}}
 body.still .home-brand-photo img,body.still .home-brand-cta b{transition:none;transform:none!important}
+
+/* The brand core, followed by two equally sized expressions. */
+.brand-perspectives{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));background:#1a1b1a;color:var(--paper)}
+.brand-perspective{position:relative;display:flex;align-items:flex-end;aspect-ratio:5/7;min-width:0;overflow:hidden;isolation:isolate}
+.brand-perspective+.brand-perspective{border-left:1px solid #ffffff30}
+.brand-perspective-image{position:absolute;inset:0;z-index:-2}
+.brand-perspective-image img{width:100%;height:100%;display:block;object-fit:cover;transition:transform .8s ease}
+.portrait-perspective img{object-position:50% 35%}
+.film-perspective img{object-position:70% 50%}
+.brand-perspective:before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,transparent 35%,#0003 53%,#000b 83%,#000d)}
+.brand-perspective-copy{width:100%;padding:40px 3.5vw;min-width:0}
+.brand-perspective-copy h2{font:700 clamp(42px,6.3vw,100px)/.9 'Barlow Condensed',Impact,sans-serif;letter-spacing:-.025em;margin:24px 0}
+.brand-perspective-copy p{font-size:clamp(13px,1.25vw,20px);line-height:1.8;margin:0 0 25px}
+.brand-perspective-cta{display:flex;justify-content:space-between;align-items:center;border-top:1px solid #ffffff70;padding-top:18px;font-size:11px;letter-spacing:.6px}
+.brand-perspective-cta b{font-size:27px;font-weight:400;transition:transform .3s}
+.brand-perspective:hover img{transform:scale(1.025)}
+.brand-perspective:hover .brand-perspective-cta b{transform:translate(3px,-3px)}
+.brand-perspective:focus-visible{outline:2px solid var(--red);outline-offset:-3px}
+@media(max-width:700px){
+ .brand-perspective{aspect-ratio:auto;min-height:440px}
+ .brand-perspective-copy{padding:24px 14px}
+ .brand-perspective-copy .eyebrow{font-size:8px;letter-spacing:.4px}
+ .brand-perspective-copy h2{font-size:clamp(30px,8.2vw,54px);min-height:2.7em;margin:20px 0 16px}
+ .brand-perspective-copy p{font-size:11px;min-height:3.6em;margin-bottom:20px}
+ .attitude-day-opening{display:inline-block;max-width:3.3em}
+ .brand-perspective-cta{font-size:8px;letter-spacing:0;gap:8px;padding-top:13px}
+ .brand-perspective-cta b{font-size:21px}
+ .film-perspective img{object-position:72% 50%}
+}
+@media(prefers-reduced-motion:reduce){.brand-perspective img,.brand-perspective-cta b{transition:none!important;transform:none!important}}
+body.still .brand-perspective img,body.still .brand-perspective-cta b{transition:none!important;transform:none!important}
