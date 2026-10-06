@@ -94,3 +94,7 @@
 @media(max-width:700px){.home-film-toggle{left:14px;bottom:14px;font-size:9px}}
 @media(prefers-reduced-motion:reduce){.home-hero-video{display:none;transition:none}.home-film-toggle{display:none}}
 .still .home-hero-video{display:none}.still .home-film-toggle{display:none}
+
+/* Coming-soon forms retain their layout without accepting input. */
+form[data-form="newsletter"] input:disabled,form[data-form="contact"] input:disabled,form[data-form="contact"] select:disabled,form[data-form="contact"] textarea:disabled{opacity:1;color:inherit;-webkit-text-fill-color:currentColor;cursor:not-allowed}
+form[data-form="newsletter"] button:disabled,form[data-form="contact"] button:disabled{cursor:not-allowed;opacity:.65}
