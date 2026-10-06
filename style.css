@@ -98,3 +98,33 @@
 /* Coming-soon forms retain their layout without accepting input. */
 form[data-form="newsletter"] input:disabled,form[data-form="contact"] input:disabled,form[data-form="contact"] select:disabled,form[data-form="contact"] textarea:disabled{opacity:1;color:inherit;-webkit-text-fill-color:currentColor;cursor:not-allowed}
 form[data-form="newsletter"] button:disabled,form[data-form="contact"] button:disabled{cursor:not-allowed;opacity:.65}
+
+/* Dedicated visual brand entry and per-frame editorial credits. */
+.home-brand-entry{background:#1a1b1a;margin:0;color:var(--paper)}
+.home-brand-main{display:grid;grid-template-columns:56% 44%;min-width:0}
+.home-brand-photo{position:relative;overflow:hidden;min-width:0;aspect-ratio:4/5}
+.home-brand-photo img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .8s ease}
+.home-brand-photo>span{position:absolute;bottom:26px;left:30px;font-size:11px;letter-spacing:1.3px;color:#fff;text-shadow:0 1px 8px #000}
+.home-brand-copy{display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding:50px 4vw;min-width:0}
+.home-brand-copy h2{font:700 clamp(62px,7.2vw,118px)/.87 'Barlow Condensed',Impact,sans-serif;letter-spacing:-.025em;margin:38px 0 32px}
+.home-brand-statement{font-size:clamp(24px,2.5vw,40px);line-height:1.65;letter-spacing:-.04em;margin:0 0 28px}
+.home-brand-detail{font-size:14px;line-height:2.1;color:#bcbfba;margin:0 0 36px}
+.home-brand-cta{display:flex;align-items:center;gap:35px;border-bottom:1px solid #ffffff80;padding:14px 0;font-size:12px;letter-spacing:1px}
+.home-brand-cta b{font-size:30px;font-weight:400;transition:transform .3s}
+.home-brand-main:hover .home-brand-cta b,.home-brand-main:focus-visible .home-brand-cta b{transform:translate(4px,-4px)}
+.home-brand-main:hover .home-brand-photo img{transform:scale(1.025)}
+.home-brand-main:focus-visible{outline:2px solid var(--red);outline-offset:-3px}
+.home-brand-foot{padding:22px 3.5vw;border-top:1px solid #ffffff20;display:flex;justify-content:space-between;align-items:center;gap:20px;font-size:11px;letter-spacing:1px}
+.home-brand-foot .text-link{font-size:12px}
+.journal-lead-frame{max-width:950px;margin:0 auto}
+.editorial-story .journal-lead-frame .story-photo{max-width:none;margin:0;width:100%;height:auto;aspect-ratio:4/5;background:#ddd}
+.journal-lead-frame .story-photo img{object-fit:contain;animation:none}
+.journal-pieces{border-top:1px solid #ffffff26;margin-top:18px;padding-top:17px;color:var(--paper)}
+.journal-pieces-label{display:block;font-size:10px;letter-spacing:1.7px;color:#aaa;margin-bottom:8px}
+.journal-pieces nav{display:flex;flex-wrap:wrap;align-items:start;gap:4px 22px;min-width:0}
+.journal-pieces .text-link{font-size:11px;line-height:1.7;letter-spacing:.15px;overflow-wrap:anywhere;max-width:100%;padding:8px 0}
+.journal-cut-caption{margin:0}
+.journal-styling-note{font-size:11px;line-height:1.8;color:#939792;margin:12px 0 0}
+@media(max-width:700px){.home-brand-main{grid-template-columns:1fr}.home-brand-photo{aspect-ratio:4/5}.home-brand-photo>span{left:20px;bottom:20px}.home-brand-copy{padding:35px 22px 42px}.home-brand-copy h2{font-size:clamp(72px,20vw,112px);margin:28px 0}.home-brand-statement{font-size:28px;margin-bottom:22px}.home-brand-detail{font-size:13px;margin-bottom:20px}.home-brand-foot{padding:22px;align-items:start;flex-direction:column;gap:14px}.home-brand-foot .text-link{font-size:10px;letter-spacing:0}.journal-pieces nav{gap:2px 18px}.journal-pieces .text-link{font-size:10px}}
+@media(prefers-reduced-motion:reduce){.home-brand-photo img,.home-brand-cta b{transition:none}.home-brand-main:hover .home-brand-photo img,.home-brand-main:hover .home-brand-cta b{transform:none}}
+body.still .home-brand-photo img,body.still .home-brand-cta b{transition:none;transform:none!important}
