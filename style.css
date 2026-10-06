@@ -84,3 +84,13 @@
 .private-principles>div{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:50px;margin-top:55px}.private-principles article{border-top:1px solid #ffffff50;padding-top:25px;min-width:0}.private-principles article>span{font-size:10px;letter-spacing:.1em}.private-principles h2{font-size:clamp(26px,3vw,45px);font-weight:500}.private-principles p{font-size:14px;line-height:2;color:#bbb}.private-principles a{font-size:11px;overflow-wrap:anywhere}
 .private-season-hero h1{font-family:'Barlow Condensed',Impact,sans-serif;letter-spacing:-.025em;line-height:.9;font-size:clamp(75px,10vw,160px)}
 @media(max-width:700px){.private-hero h1{font-size:clamp(82px,26vw,148px)}.private-hero h1 span{font-size:12px}.private-hero .rich-hero-photo{min-height:380px;height:65svh}.private-season-line{font-size:8px;padding:18px}.private-links{gap:18px}.private-links .text-link{font-size:11px}.private-season-hero h1{font-size:26vw}.private-principles>div{grid-template-columns:1fr;gap:40px}.private-brand-note h2{font-size:26px}.private-about-hero h1{font-size:22vw}.private-about-hero+.about-story h2{font-size:clamp(21px,6.4vw,30px)}.brand-portrait-entry .season-entry-copy h2{font-size:21vw}.private-campaign .campaign-caption>div a{font-size:10px}}
+
+/* PRIVATE HOURS — silent homepage film, with the original photo beneath. */
+.home-hero-link{display:block;height:100%;position:relative}
+.home-hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 0%;opacity:0;pointer-events:none;transition:opacity .3s ease}
+.home-hero-media.film-ready .home-hero-video{opacity:1}
+.home-film-toggle{position:absolute;bottom:25px;left:25px;z-index:2;border:1px solid #eee8;background:#1118;color:#fff;padding:8px 12px;font-size:10px;letter-spacing:.12em;cursor:pointer}
+.home-film-toggle:hover{background:#111d}.home-film-toggle:focus-visible{outline:2px solid #fff;outline-offset:3px}.home-film-toggle[hidden]{display:none}
+@media(max-width:700px){.home-film-toggle{left:14px;bottom:14px;font-size:9px}}
+@media(prefers-reduced-motion:reduce){.home-hero-video{display:none;transition:none}.home-film-toggle{display:none}}
+.still .home-hero-video{display:none}.still .home-film-toggle{display:none}
