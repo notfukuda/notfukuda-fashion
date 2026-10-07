@@ -159,3 +159,35 @@ body.still .home-brand-photo img,body.still .home-brand-cta b{transition:none;tr
 }
 @media(prefers-reduced-motion:reduce){.brand-perspective img,.brand-perspective-cta b{transition:none!important;transform:none!important}}
 body.still .brand-perspective img,body.still .brand-perspective-cta b{transition:none!important;transform:none!important}
+
+/* Purchase intent is separate from the personal saved-items shelf. */
+.launch-note{height:38px;display:flex;align-items:center;justify-content:center;text-align:center;padding:6px 16px;background:var(--paper);color:var(--black);font-size:11px;line-height:1.6;letter-spacing:.03em}
+.home #header{top:38px}
+.estimated-price{display:inline-block;font-size:9px!important;font-weight:400;letter-spacing:.06em;line-height:1.7;color:#74746f;margin-right:5px}
+.card-price{display:flex;flex-direction:column;align-items:flex-end;gap:2px;white-space:nowrap}
+.card-price .estimated-price{margin-right:0;font-size:8px!important}
+.price .estimated-price{vertical-align:middle;font-size:10px!important}
+.purchase-like{display:inline-flex;align-items:center;justify-content:center;gap:9px;border:1px solid #1113;color:#222;min-height:40px;padding:8px 13px;font-size:12px;line-height:1;border-radius:0;font-variant-numeric:tabular-nums}
+.purchase-like svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:1.4;flex-shrink:0}
+.purchase-like.active{color:var(--red);border-color:#ed2c2450}
+.purchase-like.active svg{fill:currentColor}
+.purchase-like:disabled{cursor:progress;opacity:.6}
+.purchase-like .like-label{font-size:10px}
+.card-like{margin-top:14px}
+.detail-like{margin-bottom:24px;min-height:45px;padding:11px 16px}
+.product-info .price{margin-bottom:17px}
+.heart svg{fill:none;stroke:currentColor}
+.heart.active svg{fill:currentColor}
+.product-info .add-row .heart{flex-shrink:0}
+.look-products .estimated-price,.search-result .estimated-price{display:block}
+@media(max-width:700px){
+ .launch-note{height:44px;font-size:10px;padding:6px 14px}
+ .home #header{top:44px}
+ .card-meta{flex-wrap:wrap;gap:9px}
+ .card-meta>a{min-width:0}
+ .card-price{align-items:flex-start;white-space:normal}
+ .card-meta .estimated-price{font-size:8px!important}
+ .purchase-like{min-height:40px;padding:8px 10px;gap:7px}
+ .purchase-like .like-label{font-size:9px}
+ .price .estimated-price{font-size:9px!important}
+}
