@@ -4,3 +4,10 @@
 
 /* NF011 fit comparison */
 .fit-modes{position:absolute;top:49px;left:18px;display:flex;gap:4px;z-index:2}.fit-modes button{font-size:10px;padding:8px 10px;background:rgba(238,238,233,.92);border:1px solid #c7c7c1;color:#555}.fit-modes button[aria-pressed=true]{background:#222;color:#fff;border-color:#222}
+
+/* Fictional-brand disclosure belongs to every registered wordmark. */
+.brand{display:inline-flex;flex-direction:column;align-items:flex-start;gap:6px}
+.brand-wordmark{font:inherit;line-height:1;white-space:nowrap}
+.brand-wordmark sup{font-size:.36em;font-weight:500;line-height:0;vertical-align:super;letter-spacing:0;margin-left:3px}
+.brand-disclosure{display:flex;align-items:center;gap:7px;font-size:10px;font-weight:500;line-height:1.4;letter-spacing:.22em;white-space:nowrap;color:inherit}
+.brand-disclosure:before{content:"";width:12px;height:1px;flex:none;background:currentColor}

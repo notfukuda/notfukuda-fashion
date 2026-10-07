@@ -191,3 +191,15 @@ body.still .brand-perspective img,body.still .brand-perspective-cta b{transition
  .purchase-like .like-label{font-size:9px}
  .price .estimated-price{font-size:9px!important}
 }
+
+/* Fictional-brand disclosure belongs to every registered wordmark. */
+.brand{display:inline-flex;flex-direction:column;align-items:flex-start;gap:6px}
+.brand-wordmark{font:inherit;line-height:1;white-space:nowrap}
+.brand-wordmark sup{font-size:.36em;font-weight:500;line-height:0;vertical-align:super;letter-spacing:0;margin-left:3px}
+.brand-disclosure{display:flex;align-items:center;gap:7px;font-size:10px;font-weight:500;line-height:1.4;letter-spacing:.22em;white-space:nowrap;color:inherit}
+.brand-disclosure:before{content:"";width:12px;height:1px;flex:none;background:currentColor}
+
+.footer-word{display:inline-flex;flex-direction:column;align-items:flex-start;gap:18px;align-self:flex-start}
+.footer-word .brand-disclosure{font-size:12px;letter-spacing:.35em;gap:10px}
+.footer-word .brand-disclosure:before{width:26px}
+@media(max-width:700px){.brand{gap:5px}.footer-word{gap:14px}.footer-word .brand-disclosure{font-size:11px}}
